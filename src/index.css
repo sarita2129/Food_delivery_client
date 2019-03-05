@@ -12,7 +12,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.d-inline-block{
+  display:inline-block !important;
 
+}
+/* .board-row{
+  position: relative;
+  display:inline-block;
+} */
+.navbarbg{
+  background-color: #333545;
+
+}
+.navbarbg a ,span{
+  color: #FFF !important;
+}
+.mT10{
+  margin-top:10px;
+}
 .moviediv{
   width:300px;
   height:300px;
@@ -27,8 +44,8 @@ border-radius: 5px;
 box-sizing: border-box;
 }
 .movieimg{
-  /* width:100%; */
-  /* height:250px; */
+  width:100%;
+  height:250px;
   display:inline-block;
   position:relative;
   max-height: 300px;
@@ -42,4 +59,79 @@ box-sizing: border-box;
 box-shadow: 1px 2px 16px 0px rgba(0,0,0,0.75);
 border-radius: 5px;
 box-sizing: border-box;
+}
+.shadows{
+  width:300px;
+  -webkit-box-shadow: 1px 2px 16px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 2px 16px 0px rgba(0,0,0,0.75);
+box-shadow: 1px 2px 16px 0px rgba(0,0,0,0.75);
+border-radius: 5px;
+box-sizing: border-box;
+}
+.bannerdiv{
+  background: rgba(0,0,0,0.4);
+}
+.banner{
+  width:100%;
+  background-image: url('/images/pizza3.jpg');
+  background-size: cover;
+  padding: 25px 0 40px;
+  height: 350px;
+  /* opacity: 0.8; */
+  background-position: bottom center;
+  z-index: 6;
+}
+.navbg{
+  background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+  background-blend-mode: screen;
+  /* background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%); */
+}
+.footer-bg{
+  background-color: #50c9c3;
+}
+.link{
+  border-radius: 5px;
+  border: 3px solid #50c9c3;
+}
+.nav-margin{
+  margin-right: 1rem !important;
+  margin-left: 1rem !important;
+}
+.pL10{
+  padding-left: 10px;
+}
+.pR10{
+  padding-right: 10px;
+}
+.screen{
+position: relative;
+}
+.innerdiv {
+position: absolute;
+bottom: 0;
+right: 0;
+}
+.pcolor{
+  color:#FFF !important;
+}
+.botclose{
+  position: absolute;
+  /* color:#FFF; */
+  margin-top:430px;
+  /* vertical-align: top; */
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+}
+.mL10{
+  margin-left: 10px;
+}
+.mT10{
+  margin-top: 10px;
+}
+.mB10{
+  margin-bottom: 10px;
+}
+.var{
+  display: none;
 }

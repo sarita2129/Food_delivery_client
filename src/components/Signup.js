@@ -15,7 +15,7 @@ class Signup extends Component{
   let nv;
   if (token !== "undefined") {
     // nv = jwtDecode(token);
-    fetch("https://localhost:5000/api/verify?token="+token)
+    fetch("http://localhost:5000/api/verify?token="+token)
     .then(res => res.json)
     .then(json => {
       if(json.success)

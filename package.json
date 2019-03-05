@@ -5,6 +5,7 @@
   "homepage": "https://sarita2129.github.io/Food_order_client/#/home",
   "dependencies": {
     "axios": "^0.18.0",
+    "bootstrap": "^4.3.1",
     "jquery": "^3.3.1",
     "jwt-decode": "^2.2.0",
     "lodash": "^4.17.11",

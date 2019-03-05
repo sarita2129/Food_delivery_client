@@ -137,6 +137,7 @@ export default class RestaurantInfo extends Component{
          body: JSON.stringify({
            order_no:Math.random().toString(36).slice(2).toUpperCase() + Math.round(Math.random(1000) * 10000),
            userId:userid,
+           restaurant_id:this.props.match.params.restaurant,
            dishId:dishArray,
            cost:dishCost,
            deliverycost:this.state.deliverycharges,
@@ -169,7 +170,7 @@ export default class RestaurantInfo extends Component{
   render(){
     return(
       <div className="container">{ this.state.restaurant.map( (restaurant) => (
-          <div className="row">
+          <div className="row mT10 mB10">
             <div key={restaurant._id + 'moviediv'} className="row d-inline-block col-md-8">
                  <h1>{restaurant.name}</h1>
                  <p>{restaurant.description}</p>
@@ -177,9 +178,7 @@ export default class RestaurantInfo extends Component{
 
                  <div className="col-md-4">
 
-                     <div key={restaurant._id}>
-                        <img src={ restaurant.image} alt={restaurant.name} className="movieimg" key={'img' + restaurant._id}/>
-                     </div>
+
 
                  </div>
                  {this.state.dishCategory.map((type) =>(
@@ -202,6 +201,11 @@ export default class RestaurantInfo extends Component{
                  ))}
             </div>
             <div className="col-md-4">
+              <div className="row">
+                { this.state.restaurant.map( (restaurant) => (<div key={restaurant._id}>
+                   <img src={ restaurant.image} alt={restaurant.name} className="movieimg" key={'img' + restaurant._id}/>
+                </div>))}
+              </div>
             {
               (this.state.order.length > 0) ?
 
