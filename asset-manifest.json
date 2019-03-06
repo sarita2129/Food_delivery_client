@@ -1,13 +1,13 @@
 {
-  "main.css": "/Food_order_client/static/css/main.d05d8f69.chunk.css",
-  "main.js": "/Food_order_client/static/js/main.55fbe9fe.chunk.js",
-  "main.js.map": "/Food_order_client/static/js/main.55fbe9fe.chunk.js.map",
-  "runtime~main.js": "/Food_order_client/static/js/runtime~main.ae6f346b.js",
-  "runtime~main.js.map": "/Food_order_client/static/js/runtime~main.ae6f346b.js.map",
-  "static/js/2.97808528.chunk.js": "/Food_order_client/static/js/2.97808528.chunk.js",
-  "static/js/2.97808528.chunk.js.map": "/Food_order_client/static/js/2.97808528.chunk.js.map",
-  "index.html": "/Food_order_client/index.html",
-  "precache-manifest.c048ab59baa05f661ad37f48329df973.js": "/Food_order_client/precache-manifest.c048ab59baa05f661ad37f48329df973.js",
-  "service-worker.js": "/Food_order_client/service-worker.js",
-  "static/css/main.d05d8f69.chunk.css.map": "/Food_order_client/static/css/main.d05d8f69.chunk.css.map"
+  "main.css": "/Food_delivery_client/static/css/main.041743fa.chunk.css",
+  "main.js": "/Food_delivery_client/static/js/main.5c562a01.chunk.js",
+  "main.js.map": "/Food_delivery_client/static/js/main.5c562a01.chunk.js.map",
+  "runtime~main.js": "/Food_delivery_client/static/js/runtime~main.3e4c19b1.js",
+  "runtime~main.js.map": "/Food_delivery_client/static/js/runtime~main.3e4c19b1.js.map",
+  "static/js/2.10c83189.chunk.js": "/Food_delivery_client/static/js/2.10c83189.chunk.js",
+  "static/js/2.10c83189.chunk.js.map": "/Food_delivery_client/static/js/2.10c83189.chunk.js.map",
+  "index.html": "/Food_delivery_client/index.html",
+  "precache-manifest.ca2ac2481e47fc885cab55e289f33f64.js": "/Food_delivery_client/precache-manifest.ca2ac2481e47fc885cab55e289f33f64.js",
+  "service-worker.js": "/Food_delivery_client/service-worker.js",
+  "static/css/main.041743fa.chunk.css.map": "/Food_delivery_client/static/css/main.041743fa.chunk.css.map"
 }
