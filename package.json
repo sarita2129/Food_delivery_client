@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sarita2129.github.io/Food_order_client/#/home",
+  "homepage": "https://sarita2129.github.io/Food_delivery_client/#/home",
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
