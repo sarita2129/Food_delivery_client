@@ -5,6 +5,7 @@ import axios from 'axios';
 let dishCategory = [];
 const userid = window.localStorage.getItem('userid');
 const SERVER_URL = "https://foodserverapp.herokuapp.com/api/";
+// const SERVER_URL = "http://localhost:5000/api/";
 
 export default class RestaurantInfo extends Component{
   constructor(props){

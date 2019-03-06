@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import $ from 'jquery';
 let total = 0;
+let index = 0;
 const userid = window.localStorage.getItem('userid');
 const SERVER_URL = "https://foodserverapp.herokuapp.com/api/";
+// const SERVER_URL = "http://localhost:5000/api/";
 
 export default class Home extends Component{
   constructor(){
@@ -19,6 +21,8 @@ export default class Home extends Component{
       .then(res => {
         var orderList = [res];
         var orderarray = [];
+        var stateOrder = [];
+        var statedishes = [];
 
         // console.log(orderList[0]);
         $.each(orderList[0],(key,value) => {
@@ -30,19 +34,21 @@ export default class Home extends Component{
           .then(res =>
                       {
                         var resArray = [res];
-                        var stateOrder = [];
-                        var statedishes = [];
+                        // var stateOrder = [];
                         // console.log(resArray[0].name);
                         // this.setState({orderdetails:res});
 
                         $.each(resArray,(key,value) => {
                           // console.log(value);
+                          var orderid="";
+                          var cost=[];
 
                           $.each(value,(key1,value1) => {
 
                             if(key1 === "order"){
                               $.each(value1,(key2,value2) => {
-
+                                orderid = value2._id;
+                                cost=value2.cost;
                               var order = {
                                 _id: value2._id,
                                 cost:value2.cost,
@@ -55,20 +61,18 @@ export default class Home extends Component{
                               }
                               stateOrder.push(order);
                               this.setState({ order: [...stateOrder] });
-
-
                             });
                           }
                           if(key1 === "dishes"){
                             $.each(value1,(key2,value2) => {
-                              // console.log(value2)
+                              console.log(cost);
 
                             var dish = {
-                              orderid:value,
+                              orderid:orderid,
                               _id: value2._id,
                               title:value2.title,
                               description: value2.description,
-                              cost:value2.cost,
+                              cost:cost[key2],
                             }
                             statedishes.push(dish);
 
@@ -77,6 +81,7 @@ export default class Home extends Component{
                           }
                           });
                         });
+                        // console.log(stateOrder);
                       });
         });
         // console.log(stateOrder);
@@ -146,13 +151,13 @@ export default class Home extends Component{
         {this.state.order.map( (order) => (
           <div>
           <p className="var">{ total = 0 }</p>
-          {list===order._id ?
+
+          {list === order._id ?
             <div>
             <h3>{order.name}</h3>
 
               <h3>{order.description}</h3>
               <h3>{order.Address}</h3>
-
 
                 <div className="row">
                   <p>Order No :{order.order_no}</p>
@@ -172,7 +177,9 @@ export default class Home extends Component{
 
                 </div>
                 </div>
-                {this.state.dishes.map( (dish, index) => (
+                {this.state.dishes.map( (dish) => (
+                  <div>
+                  {list === dish.orderid ?
                   <div className="row">
 
                   <div className="col-md-2">
@@ -181,13 +188,13 @@ export default class Home extends Component{
                   </div>
                   <div className="col-md-2">
 
-                    <p>{`$${order.cost[index]}`}</p>
+                    <p>{`$${dish.cost}`}</p>
 
-                    <p className="var">{ total += order.cost[index] }</p>
+                    <p className="var">{ total += dish.cost }</p>
                   </div>
                   </div>
-
-
+                  : null }
+                  </div>
                 ))}
                 <div className="row">
                     <div className="col-md-2">

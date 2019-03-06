@@ -7,6 +7,7 @@ import Login from './Login';
 // import jwtDecode from 'jwt-decode';
 // import './Nav.css'
 const SERVER_URL = "https://foodserverapp.herokuapp.com/api/";
+// const SERVER_URL = "http://localhost:5000/api/";
 
 class Nav extends Component{
   constructor(){

@@ -4,6 +4,7 @@ import $ from 'jquery';
 import RestaurantInfo from './RestaurantInfo';
 import MessageList from './MessageList';
 const SERVER_URL = "https://foodserverapp.herokuapp.com/api/";
+// const SERVER_URL = "http://localhost:5000/api/";
 
 export default class Home extends Component{
   constructor(){
