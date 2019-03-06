@@ -1,14 +1,13 @@
 {
-  "main.css": "/Food_delivery_client/static/css/main.87d71625.chunk.css",
-  "main.js": "/Food_delivery_client/static/js/main.cdaa1d86.chunk.js",
-  "main.js.map": "/Food_delivery_client/static/js/main.cdaa1d86.chunk.js.map",
+  "main.css": "/Food_delivery_client/static/css/main.2085025c.chunk.css",
+  "main.js": "/Food_delivery_client/static/js/main.21485cfa.chunk.js",
+  "main.js.map": "/Food_delivery_client/static/js/main.21485cfa.chunk.js.map",
   "runtime~main.js": "/Food_delivery_client/static/js/runtime~main.3e4c19b1.js",
   "runtime~main.js.map": "/Food_delivery_client/static/js/runtime~main.3e4c19b1.js.map",
   "static/js/2.10c83189.chunk.js": "/Food_delivery_client/static/js/2.10c83189.chunk.js",
   "static/js/2.10c83189.chunk.js.map": "/Food_delivery_client/static/js/2.10c83189.chunk.js.map",
   "index.html": "/Food_delivery_client/index.html",
-  "precache-manifest.a26b517c6edaf1dec7ad2378d2da4c04.js": "/Food_delivery_client/precache-manifest.a26b517c6edaf1dec7ad2378d2da4c04.js",
+  "precache-manifest.53a35ea34351935d6dc79bb21fa83d93.js": "/Food_delivery_client/precache-manifest.53a35ea34351935d6dc79bb21fa83d93.js",
   "service-worker.js": "/Food_delivery_client/service-worker.js",
-  "static/css/main.87d71625.chunk.css.map": "/Food_delivery_client/static/css/main.87d71625.chunk.css.map",
-  "static/media/index.css": "/Food_delivery_client/static/media/pizza3.8f601332.jpg"
+  "static/css/main.2085025c.chunk.css.map": "/Food_delivery_client/static/css/main.2085025c.chunk.css.map"
 }
