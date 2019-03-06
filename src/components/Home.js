@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import $ from 'jquery';
 import RestaurantInfo from './RestaurantInfo';
 import MessageList from './MessageList';
-const SERVER_URL = "https://foodserverapp.herokuapp.com/";
+const SERVER_URL = "https://foodserverapp.herokuapp.com/api/";
 
 export default class Home extends Component{
   constructor(){

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Login from './Login';
 // import jwtDecode from 'jwt-decode';
 // import './Nav.css'
-const SERVER_URL = "https://foodserverapp.herokuapp.com/";
+const SERVER_URL = "https://foodserverapp.herokuapp.com/api/";
 
 class Nav extends Component{
   constructor(){

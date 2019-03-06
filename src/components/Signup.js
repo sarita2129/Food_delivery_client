@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {browserHistory} from 'react-router';
 // import jwtDecode from 'jwt-decode';
 // import './Login.css'
-const SERVER_URL = "https://foodserverapp.herokuapp.com/";
+const SERVER_URL = "https://foodserverapp.herokuapp.com/api/";
 
 class Signup extends Component{
   constructor(props){

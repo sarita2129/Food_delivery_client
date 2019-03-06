@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import $ from 'jquery';
 let total = 0;
 const userid = window.localStorage.getItem('userid');
-const SERVER_URL = "https://foodserverapp.herokuapp.com/";
+const SERVER_URL = "https://foodserverapp.herokuapp.com/api/";
 
 export default class Home extends Component{
   constructor(){

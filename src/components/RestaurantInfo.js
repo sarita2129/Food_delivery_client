@@ -4,7 +4,7 @@ import $ from 'jquery';
 import axios from 'axios';
 let dishCategory = [];
 const userid = window.localStorage.getItem('userid');
-const SERVER_URL = "https://foodserverapp.herokuapp.com/";
+const SERVER_URL = "https://foodserverapp.herokuapp.com/api/";
 
 export default class RestaurantInfo extends Component{
   constructor(props){
