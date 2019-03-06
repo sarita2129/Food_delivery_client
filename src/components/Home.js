@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import $ from 'jquery';
 import RestaurantInfo from './RestaurantInfo';
 import MessageList from './MessageList';
+const SERVER_URL = "https://foodserverapp.herokuapp.com/";
 
 export default class Home extends Component{
   constructor(){
@@ -14,7 +15,7 @@ export default class Home extends Component{
 
     const fetchRestaurants = () => {
       // alert('1');
-      fetch("http://localhost:5000/api/restaurants")
+      fetch(SERVER_URL+"restaurants")
       .then(res => res.json())
       .then(res =>
                   {

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import $ from 'jquery';
 let total = 0;
 const userid = window.localStorage.getItem('userid');
+const SERVER_URL = "https://foodserverapp.herokuapp.com/";
 
 export default class Home extends Component{
   constructor(){
@@ -13,7 +14,7 @@ export default class Home extends Component{
       orderList:[]
   };
     const fetchOrderDetails = () => {
-      fetch("http://localhost:5000/api/myorders?id="+userid)
+      fetch(SERVER_URL+"myorders?id="+userid)
       .then(res => res.json())
       .then(res => {
         var orderList = [res];
@@ -24,7 +25,7 @@ export default class Home extends Component{
           orderarray.push(value);
           // console.log(orderarray);
 
-          fetch("http://localhost:5000/api/orderdetails?id="+value)
+          fetch(SERVER_URL+"orderdetails?id="+value)
           .then(res => res.json())
           .then(res =>
                       {

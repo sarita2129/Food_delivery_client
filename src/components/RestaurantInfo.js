@@ -4,6 +4,7 @@ import $ from 'jquery';
 import axios from 'axios';
 let dishCategory = [];
 const userid = window.localStorage.getItem('userid');
+const SERVER_URL = "https://foodserverapp.herokuapp.com/";
 
 export default class RestaurantInfo extends Component{
   constructor(props){
@@ -20,7 +21,7 @@ export default class RestaurantInfo extends Component{
     var resArray = [this.props.match.params.restaurant];
     const fetchRestaurantDetails = () => {
       // alert('1');
-      fetch("http://localhost:5000/api/restaurant?id="+this.props.match.params.restaurant)
+      fetch(SERVER_URL+"restaurant?id="+this.props.match.params.restaurant)
       .then(res => res.json())
       .then(res =>
                   {
@@ -132,7 +133,7 @@ export default class RestaurantInfo extends Component{
       dishCost[j] = this.state.order[j].cost;
       // postData['cost'] = this.state.order[j].cost;
     }
-    fetch("http://localhost:5000/api/order",
+    fetch(SERVER_URL+"order",
          { method: 'POST',
          body: JSON.stringify({
            order_no:Math.random().toString(36).slice(2).toUpperCase() + Math.round(Math.random(1000) * 10000),

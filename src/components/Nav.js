@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import Login from './Login';
 // import jwtDecode from 'jwt-decode';
 // import './Nav.css'
+const SERVER_URL = "https://foodserverapp.herokuapp.com/";
 
 class Nav extends Component{
   constructor(){
@@ -30,7 +31,7 @@ class Nav extends Component{
   if (token !== "undefined") {
     // nv = jwtDecode(token);
     // alert('2');
-    fetch("http://localhost:5000/api/verify?token="+token)
+    fetch(SERVER_URL+"verify?token="+token)
     .then(res => res.json())
     .then(json => {
       if(json.success)
@@ -66,7 +67,7 @@ class Nav extends Component{
     if (token !== "undefined") {
       // nv = jwtDecode(token);
       // alert('2');
-      fetch("http://localhost:5000/api/logout?token="+token)
+      fetch(SERVER_URL+"logout?token="+token)
       .then(res => res.json())
       .then(json => {
         if(json.success)

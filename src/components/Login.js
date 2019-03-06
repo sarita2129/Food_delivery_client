@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {browserHistory} from 'react-router';
 // import jwtDecode from 'jwt-decode';
 // import './Login.css'
+const SERVER_URL = "https://foodserverapp.herokuapp.com/";
 
 class Login extends Component{
   constructor(props){
@@ -18,7 +19,7 @@ class Login extends Component{
   let nv;
   if (token !== "undefined") {
     // nv = jwtDecode(token);
-    fetch("http://localhost:5000/api/verify?token="+token)
+    fetch(SERVER_URL+"verify?token="+token)
     .then(res => res.json)
     .then(json => {
       if(json.success)

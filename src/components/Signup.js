@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {browserHistory} from 'react-router';
 // import jwtDecode from 'jwt-decode';
 // import './Login.css'
+const SERVER_URL = "https://foodserverapp.herokuapp.com/";
 
 class Signup extends Component{
   constructor(props){
@@ -15,7 +16,7 @@ class Signup extends Component{
   let nv;
   if (token !== "undefined") {
     // nv = jwtDecode(token);
-    fetch("http://localhost:5000/api/verify?token="+token)
+    fetch(SERVER_URL+"verify?token="+token)
     .then(res => res.json)
     .then(json => {
       if(json.success)
@@ -59,7 +60,7 @@ class Signup extends Component{
     // formData.append("email",this.inputNode1.value);
     // formData.append("password",this.inputNode2.value);
     // console.log(formData);
-    fetch("http://localhost:5000/api/user",
+    fetch(SERVER_URL+"user",
          { method: 'POST',
          body: JSON.stringify({
            firstname:this.inputNode1.value,
@@ -72,7 +73,7 @@ class Signup extends Component{
        .then(res => {
          if(res.success){
            console.log('signed up');
-           fetch("http://localhost:5000/api/login",
+           fetch(SERVER_URL+"login",
                 { method: 'POST',
                 body: JSON.stringify({
                   email:this.inputNode3.value,
