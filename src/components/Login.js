@@ -63,7 +63,7 @@ class Login extends Component{
     // formData.append("email",this.inputNode1.value);
     // formData.append("password",this.inputNode2.value);
     // console.log(formData);
-    fetch("http://localhost:5000/api/login",
+    fetch(SERVER_URL+"login",
          { method: 'POST',
          body: JSON.stringify({
            email:this.state.email,
