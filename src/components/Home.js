@@ -55,6 +55,8 @@ export default class Home extends Component{
     return(
       <div>
       <div className="banner">
+        <div className="overlay">
+        </div>
       </div>
       <div className="container">
 
@@ -63,9 +65,9 @@ export default class Home extends Component{
            <div key={restaurant._id + 'moviediv'} className="row d-inline-block">
            <div className="col-md-4">
            <Link to={"/restaurantinfo/"+restaurant._id.toString() } className="btn btn-light">
-           <div key={restaurant._id} className="moviediv">
+           <div key={restaurant._id} className="moviediv" >
             <img src={ restaurant.image} alt={restaurant.name} className="movieimg" key={'img' + restaurant._id}/>
-            <p>{restaurant.name}</p>
+            <h4>{restaurant.name}</h4>
             </div>
             </Link>
             </div>
