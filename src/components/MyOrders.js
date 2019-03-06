@@ -78,7 +78,7 @@ export default class Home extends Component{
                         });
                       });
         });
-        console.log(stateOrder);
+        // console.log(stateOrder);
 
         this.setState({orderList:orderarray});
 
