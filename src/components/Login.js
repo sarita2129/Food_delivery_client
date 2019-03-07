@@ -3,7 +3,6 @@ import {browserHistory} from 'react-router';
 // import jwtDecode from 'jwt-decode';
 // import './Login.css'
 const SERVER_URL = "https://foodserverapp.herokuapp.com/api/";
-import $ from 'jquery';
 // const SERVER_URL = "http://localhost:5000/api/";
 
 class Login extends Component{
