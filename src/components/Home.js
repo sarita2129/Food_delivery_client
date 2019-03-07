@@ -59,7 +59,7 @@ export default class Home extends Component{
         </div>
       </div>
       <div className="container">
-
+        <div className="md-offset-2">
            { this.state.restaurant.map( (restaurant) => (
 
            <div key={restaurant._id + 'moviediv'} className="row d-inline-block">
@@ -67,13 +67,13 @@ export default class Home extends Component{
            <Link to={"/restaurantinfo/"+restaurant._id.toString() } className="btn btn-light">
            <div key={restaurant._id} className="moviediv" >
             <img src={ restaurant.image} alt={restaurant.name} className="movieimg" key={'img' + restaurant._id}/>
-            <h4>{restaurant.name}</h4>
+            <h5>{restaurant.name}</h5>
             </div>
             </Link>
             </div>
             </div>
           ))}
-
+          </div>
 
 
       </div>

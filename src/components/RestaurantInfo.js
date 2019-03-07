@@ -17,7 +17,8 @@ export default class RestaurantInfo extends Component{
       total:0,
       deliverycharges:5,
       params:[],
-      message:''
+      message:'',
+      success:false
     }
     var resArray = [this.props.match.params.restaurant];
     const fetchRestaurantDetails = () => {
@@ -63,6 +64,9 @@ export default class RestaurantInfo extends Component{
                  // });
     };
     fetchRestaurantDetails();
+    console.log(this.state.restaurant[0])
+
+
     // console.log([...resArray]);
   }
   componentDidMount () {
@@ -150,6 +154,68 @@ export default class RestaurantInfo extends Component{
                if(res.success)
                {
                  console.log(res);
+                 this.setState({success: true});
+                 this.setState({order: res.order});
+                 var order = [res.order];
+                 var resdishId = [];
+                 var rescost = [];
+                 var order_no = "";
+                 var deliverycost = 0;
+                 var deliveryaddress = "";
+
+                 $.each(order,(key,value) => {
+
+                   $.each(value,(key1,value1) => {
+                   //
+                   order_no = value1.order_no;
+                   deliverycost = value1.deliverycost;
+                   deliveryaddress = value1.deliveryaddress;
+
+                    rescost = [value1.cost];
+                    resdishId = [value1.dishId];
+
+                   //   // stateArray.push(value1);
+                   });
+                 });
+                 this.setState({message: "Order placed Succesfully.Your order# is "+order_no});
+
+                 console.log(resdishId);
+
+                var dishes = [];
+                this.state.restaurant.map( (restaurant) =>
+                  {
+
+                    dishes = restaurant.Dishes.filter(function(restaurant) {
+                     return resdishId.some(function(t){
+                       // console.log(t);
+                       // console.log(restaurant._id);
+
+                       return String(restaurant._id) === String(t);
+                     });
+                   });
+
+                  });
+                  console.log(dishes);
+                  var dishArray = [];
+                  var total = 0;
+
+                  for(let i=0;i<=dishes.length-1;i++){
+                    total = total + Number(rescost[i]);
+
+                    var dish = {
+                      _id:dishes[i]._id,
+                      title:dishes[i].title,
+                      cost:rescost[i]
+                    };
+
+                    dishArray.push(dish);
+                  }
+                  this.setState({order:[...dishArray]});
+                  this.setState({deliverycharges:deliverycost});
+                  this.setState({deliveryaddress:deliveryaddress});
+                  this.setState({total: total});
+
+                 console.log(total);
                }
 
                });
@@ -175,26 +241,26 @@ export default class RestaurantInfo extends Component{
           <div className="row mT10 mB10">
             <div key={restaurant._id + 'moviediv'} className="row d-inline-block col-md-8">
                  <h1>{restaurant.name}</h1>
-                 <p>{restaurant.description}</p>
-                 <p>{restaurant.Address + restaurant.city}</p>
-
-                 <div className="col-md-4">
-
-
-
+                 <div className="restaurantdiv">
+                 <p className="ptag">{restaurant.description}</p>
+                 <p className="ptag">{restaurant.Address + restaurant.city}</p>
                  </div>
+
                  {this.state.dishCategory.map((type) =>(
-                   <div className="dishesdiv" key ={type}>
-                    <h2>{type}</h2>
+                   <div className="dishesdiv mB10" key ={type}>
+                    <h3>{type}</h3>
                     {
                       restaurant.Dishes.filter(item => item.type === type).map((dish) => (
-                        <div>
-                          <div key={dish._id}>
-                             <h3>{dish.title}</h3>
+                        <div className="row md-offset-1">
+                          <div key={dish._id} className="col-md-8">
+                             <h5>{dish.title}</h5>
                              <p>{dish.description}</p>
                              <p>{dish.cost + '$'}</p>
                           </div>
-                          <button onClick={() => this.addToCart(dish)}>Add</button>
+                          <div key={dish._id} className="col-md-2">
+
+                          <button className="btn btn-primary" onClick={() => this.addToCart(dish)}>Add</button>
+                          </div>
                         </div>
                       ))
                     }
@@ -223,7 +289,7 @@ export default class RestaurantInfo extends Component{
 
                     <tr>
                     <td>{order.title}</td>
-                    <td>{order.cost}</td>
+                    <td>{order.cost + '$'}</td>
                     </tr>
                 ))}
                 <tr>
@@ -232,13 +298,15 @@ export default class RestaurantInfo extends Component{
                 </tr>
                 <tr>
                 <td>Total</td>
-                <td>{(this.state.total + this.state.deliverycharges) + '$'}</td>
+                <td>{(this.state.total + Number(this.state.deliverycharges)) + '$'}</td>
                 </tr>
                 </table>
                   <form onSubmit={this.confirmOrder.bind(this)}>
                   <label>Enter Delivery Address</label>
-                  <input type="textarea" placeholder="Address" ref={node => {this.inputNode1 = node}}/>
-                  <button>Confirm</button>
+                  {this.state.success === true ? <p>{this.state.deliveryaddress}</p> :
+                  <input type="textarea" placeholder="Address" className="form-control txtarea" ref={node => {this.inputNode1 = node}}/>
+                   }
+                  <button className="btn btn-primary mT10">Confirm</button>
                   <p>{this.state.message}</p>
                   </form>
                 </div>

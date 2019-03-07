@@ -156,24 +156,19 @@ export default class Home extends Component{
             <div>
             <h3>{order.name}</h3>
 
-              <h3>{order.description}</h3>
-              <h3>{order.Address}</h3>
+              <p>{order.description}</p>
+              <p>{order.Address}</p>
+              <p className="mL10imp">Order No :{order.order_no}</p>
+              <p className="mL10imp">Delivery Address :{order.deliveryaddress}</p>
 
-                <div className="row">
-                  <p>Order No :{order.order_no}</p>
-
-                </div>
-                <div className="row">
-                  <p>Delivery Address :{order.deliveryaddress}</p>
-                </div>
                 <div className="row">
 
                 <div className="col-md-2">
-                  <h3>Items:</h3>
+                  <h5>Items:</h5>
 
                 </div>
                 <div className="col-md-2">
-                  <h3>Cost:</h3>
+                  <h5>Cost:</h5>
 
                 </div>
                 </div>
@@ -184,11 +179,11 @@ export default class Home extends Component{
 
                   <div className="col-md-2">
 
-                    <p>{dish.title}</p>
+                    <p className="pL10">{dish.title}</p>
                   </div>
                   <div className="col-md-2">
 
-                    <p>{`$${dish.cost}`}</p>
+                    <p className="pL10">{`$${dish.cost}`}</p>
 
                     <p className="var">{ total += dish.cost }</p>
                   </div>

@@ -52,12 +52,21 @@ box-sizing: border-box;
   /* margin: 0 auto; */
   /* text-align: center; */
 }
+.restaurantimg{
+  width:100%;
+  height:250px;
+  display:inline-block;
+  position:relative;
+  max-height: 350px;
+  /* margin: 0 auto; */
+  /* text-align: center; */
+}
 .dishesdiv{
   width:600px;
-  -webkit-box-shadow: 1px 2px 16px 0px rgba(0,0,0,0.75);
+  /* -webkit-box-shadow: 1px 2px 16px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 1px 2px 16px 0px rgba(0,0,0,0.75);
 box-shadow: 1px 2px 16px 0px rgba(0,0,0,0.75);
-border-radius: 5px;
+border-radius: 5px; */
 box-sizing: border-box;
 }
 .shadows{
@@ -134,4 +143,39 @@ right: 0;
 }
 .var{
   display: none;
+}
+h5:hover{
+  color:#000;
+}
+.ptag{
+  display: inline-block;
+  text-align: justify;
+}
+.restaurantdiv{
+  width:450px;
+}
+.txtarea{
+  width : 100%;
+  height: 100px;
+}
+table th{
+color: #fff;
+background-color: #007bff;
+border-color: #007bff;
+border:1px solid black;
+padding: 5px;
+
+}
+table{
+  margin-top:20px;
+  width:100%;
+  /* border:1px solid black; */
+}
+table tr td{
+  /* border:1px solid black; */
+  padding: 5px;
+  text-align: left;
+}
+.mL10imp{
+  margin-left: 10px !important;
 }
