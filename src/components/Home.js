@@ -5,7 +5,7 @@ import RestaurantInfo from './RestaurantInfo';
 import MessageList from './MessageList';
 const SERVER_URL = "https://foodserverapp.herokuapp.com/api/";
 // const SERVER_URL = "http://localhost:5000/api/";
-
+let audioplay = false;
 export default class Home extends Component{
   constructor(){
     super();
@@ -62,7 +62,7 @@ export default class Home extends Component{
         if ($win.scrollTop() == 0){
           $('.innerdiv').slideToggle('slow');
           this.setState({toggle:this.state.toggle === "expand" ? "collapse" : "expand"});
-          // if($('#myAudio'))
+          if(audioplay)
           $('#myAudio').get(0).pause();
 
         }
@@ -70,7 +70,13 @@ export default class Home extends Component{
            $('.innerdiv').slideToggle('slow');
            this.setState({toggle:this.state.toggle === "expand" ? "collapse" : "expand"});
            $('#myAudio').get(0).play();
+           audioplay = true;
         }
+        // else{
+        //   if(play)
+        //   $('#myAudio').get(0).pause();
+        //
+        // }
     // });
   }
   toggle(){
@@ -85,7 +91,13 @@ export default class Home extends Component{
         </div>
       </div>
       <div className="container">
-        <div className="md-offset-2">
+        <div className="row">
+        <img src="images/weekhot.png" alt="weekhot" key="imgweekhot" id="imgweekhot"/>
+
+        </div>
+        <div className="row">
+
+        <div className="offset-md-1">
            { this.state.restaurant.map( (restaurant) => (
 
            <div key={restaurant._id + 'moviediv'} className="row d-inline-block">
@@ -100,7 +112,7 @@ export default class Home extends Component{
             </div>
           ))}
           </div>
-
+        </div>
       </div>
       <div className="screen">
           <audio id="myAudio" >

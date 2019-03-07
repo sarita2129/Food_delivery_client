@@ -3,6 +3,7 @@ import {browserHistory} from 'react-router';
 // import jwtDecode from 'jwt-decode';
 // import './Login.css'
 const SERVER_URL = "https://foodserverapp.herokuapp.com/api/";
+import $ from 'jquery';
 // const SERVER_URL = "http://localhost:5000/api/";
 
 class Login extends Component{
@@ -16,6 +17,7 @@ class Login extends Component{
   const token = window.localStorage.getItem('jwt');
   const username = window.localStorage.getItem('username');
   const email = window.localStorage.getItem('email');
+  // console.log($(window).height() - $(document).height());
 
   let nv;
   if (token !== "undefined") {
@@ -27,13 +29,15 @@ class Login extends Component{
       {
         this.setState({
           token,
-          username:username
+          username:username,
+          SignInError:json.message
         });
       }
       else{
         this.setState({
           token,
-          IsLoading:false
+          IsLoading:false,
+          SignInError:json.message
         });
       }
     })
@@ -83,12 +87,19 @@ class Login extends Component{
 
 
                // console.log(username);
-               window.localStorage.setItem('jwt', res.token);
-               window.localStorage.setItem('username', res.username);
-               window.localStorage.setItem('email', res.email);//)
-               window.localStorage.setItem('userid', res.userid);//)
-
+               if(res.success){
+                 window.localStorage.setItem('jwt', res.token);
+                 window.localStorage.setItem('username', res.username);
+                 window.localStorage.setItem('email', res.email);//)
+                 window.localStorage.setItem('userid', res.userid);//)
                }
+               else
+               {
+                 this.setState({
+                   SignInError:res.message
+                 });
+               }
+            }
 
          // ).then(() => browserHistory.push('/home'))
        ).then(() => this.props.history.push('/home')
@@ -110,16 +121,22 @@ class Login extends Component{
  }
   render(){
     return(
-      <div className="wrapper fadeInDown">
+      <div className="container">
+        <div row="row">
+        <div className="col-md-4 offset-md-4">
         <div id="formContent">
 
-          <div className="fadeIn first">
-          </div>
-
           <form onSubmit={this._handleSubmit}>
-            <input type="text" id="login" className="fadeIn second" name="login" placeholder="login" ref={node => {this.inputNode1 = node}} onChange={this._handleEmail.bind(this)}/>
-            <input type="password" id="password" className="fadeIn third passwordinput" name="login" placeholder="password" ref={node => {this.inputNode2 = node}} onChange={this._handlePassword.bind(this)}/>
-            <input type="submit" className="fadeIn fourth" value="Log In" />
+          <div class="form-group">
+              Email
+              <input type="text" id="login" className="form-control txt" name="login" placeholder="login" ref={node => {this.inputNode1 = node}} onChange={this._handleEmail.bind(this)}/>
+            </div>
+            <div class="form-group">
+              Password
+              <input type="password" id="password" className="form-control txt" name="login" placeholder="password" ref={node => {this.inputNode2 = node}} onChange={this._handlePassword.bind(this)}/>
+            </div>
+            <input type="submit" className="btn btn-primary" value="Log In" />
+            <p>{this.state.message}</p>
           </form>
 
           <div id="formFooter">
@@ -127,6 +144,10 @@ class Login extends Component{
           </div>
 
         </div>
+        </div>
+
+        </div>
+
       </div>
 
     );
