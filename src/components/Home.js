@@ -43,9 +43,35 @@ export default class Home extends Component{
     };
     fetchRestaurants();
     // console.log(this.state.restaurant);
+    // this.toggle = this.toggle.bind(this);
   }
   componentDidMount(){
     $('.innerdiv').slideToggle('slow');
+    document.addEventListener('scroll', this.trackScrolling);
+    // $(function () {
+    //
+    //      });
+  }
+  // componentWillUnmount() {
+  // document.removeEventListener('scroll', this.trackScrolling);
+  // }
+  trackScrolling = () => {
+    var $win = $(window);
+
+    // $win.scroll(function () {
+        if ($win.scrollTop() == 0){
+          $('.innerdiv').slideToggle('slow');
+          this.setState({toggle:this.state.toggle === "expand" ? "collapse" : "expand"});
+          // if($('#myAudio'))
+          $('#myAudio').get(0).pause();
+
+        }
+        else if ($win.height() + $win.scrollTop() == $(document).height()) {
+           $('.innerdiv').slideToggle('slow');
+           this.setState({toggle:this.state.toggle === "expand" ? "collapse" : "expand"});
+           $('#myAudio').get(0).play();
+        }
+    // });
   }
   toggle(){
         $('.innerdiv').slideToggle('slow');
@@ -75,10 +101,14 @@ export default class Home extends Component{
           ))}
           </div>
 
-
       </div>
       <div className="screen">
-        <button className="screen botclose" onClick={this.toggle.bind(this)}>{this.state.toggle}</button>
+          <audio id="myAudio" >
+              <source src="images/Pling-KevanGC-1485374730.mp3" type="audio/mpeg" />
+          </audio>
+          <button className="screen botclose" onClick={this.toggle.bind(this)}>
+            <img src="images/chatbot1.png" alt="bot" width="60" height="60"/>
+          </button>
        <div className="innerdiv">
           <iframe
               allow="microphone;"

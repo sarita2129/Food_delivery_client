@@ -94,16 +94,14 @@ class Nav extends Component{
   // }
   render(){
     return(
-      <nav className="navbar navbar-expand-lg navbar-light bg-dark navbarbg" >
-
+      <nav className="navbar navbar-expand-lg navbar-light bg-dark navbarbg">
+      <Link to='/home' className="logo">Foodie</Link>
         <div className="collapse navbar-collapse" id="navbarText">
           <ul className="navbar-nav mr-auto">
-            <li className="nav-item active link">
-              <Link to='/home' className="navbar-brand nav-margin">Home</Link>
-            </li>
+
             {this.state.user ?
               <li className="nav-item active link mL10">
-                <Link to='/myorders' className="navbar-brand nav-margin">My Orders</Link>
+                <Link to='/myorders' className="navbar-brand nav-margin alinkwhite">My Orders</Link>
               </li>
               : null}
           </ul>
@@ -112,12 +110,12 @@ class Nav extends Component{
             {this.state.user ? this.state.user + '|' : null}
 
             {this.state.user ?
-              <a href="#" onClick={this.signout} className="navbar-brand link nav-margin pL10 pR10">Logout</a>
+              <a href="#" onClick={this.signout} className="navbar-brand link nav-margin pL10 pR10 alinkwhite">Logout</a>
               :
-              <Link to='/login' className="navbar-brand link nav-margin pL10 pR10">Login</Link>}
+              <Link to='/login' className="navbar-brand link nav-margin pL10 pR10 alinkwhite">Login</Link>}
 
           </span>
-          <Link to='/signup' className="navbar-brand link nav-margin pL10 pR10">SignUp</Link>
+          <Link to='/signup' className="navbar-brand link nav-margin pL10 pR10 alinkwhite">SignUp</Link>
 
         </div>
 

@@ -5,7 +5,6 @@ import {browserHistory} from 'react-router';
 const SERVER_URL = "https://foodserverapp.herokuapp.com/api/";
 // const SERVER_URL = "http://localhost:5000/api/";
 
-
 class Login extends Component{
   constructor(props){
     super(props);
@@ -126,7 +125,7 @@ class Login extends Component{
           <div id="formFooter">
             <a className="underlineHover" href="#">Forgot Password?</a>
           </div>
-          {"Welcome, " + this.state.username}
+
         </div>
       </div>
 

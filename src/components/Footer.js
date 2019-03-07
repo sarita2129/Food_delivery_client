@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import './Footer.css'
+import { Link } from 'react-router-dom';
 
 class Footer extends Component{
   render(){
     return(
       <div>
-      <footer class="container-fluid bg-grey py-5">
+      <footer class="container-fluid bg-grey py-5" >
   <div class="container">
      <div class="row">
         <div class="col-md-6">
            <div class="row">
               <div class="col-md-6 ">
                  <div class="logo-part">
-                    <img style={{width: '200px', height: '100px'}} src="images/logo.png"/>
+                    <Link to='/home' className="logo">Foodie</Link>
                  </div>
               </div>
               <div class="col-md-6 px-4">

@@ -24,7 +24,10 @@ code {
   background-color: #333545;
 
 }
-.navbarbg a ,span{
+.navbarbg span{
+  color: #FFF !important;
+}
+.alinkwhite{
   color: #FFF !important;
 }
 .mT10{
@@ -131,6 +134,11 @@ right: 0;
   bottom: 0;
   right: 0;
   z-index: 999;
+  border-radius: 50%;
+  /* background: url('/images/chatbot1.png'); */
+}
+img:hover{
+  color:#000;
 }
 .mL10{
   margin-left: 10px;
@@ -178,4 +186,15 @@ table tr td{
 }
 .mL10imp{
   margin-left: 10px !important;
+}
+.logo{
+    font-family: 'Srisakdi', cursive;
+    color: #FFF;
+    font-weight: 700;
+    font-size: 50px;
+    padding: 10px;
+    color: orange !important;
+}
+.logo a{
+  color: orange !important;
 }

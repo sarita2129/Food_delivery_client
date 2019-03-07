@@ -306,7 +306,7 @@ export default class RestaurantInfo extends Component{
                   {this.state.success === true ? <p>{this.state.deliveryaddress}</p> :
                   <input type="textarea" placeholder="Address" className="form-control txtarea" ref={node => {this.inputNode1 = node}}/>
                    }
-                  <button className="btn btn-primary mT10">Confirm</button>
+                  {this.state.success === false ? <button className="btn btn-primary mT10">Confirm</button> : null }
                   <p>{this.state.message}</p>
                   </form>
                 </div>
