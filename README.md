@@ -37,7 +37,7 @@ This is the client that consumes the services exposed by server application.
 
 This application exposes services that is consumed by the client application for all the features listed below.
 
-##Model
+## Model
 
 * Dish
 * Order
