@@ -7,6 +7,7 @@ import Login from './Login';
 // import jwtDecode from 'jwt-decode';
 // import './Nav.css'
 const SERVER_URL = "https://foodserverapp.herokuapp.com/api/";
+
 // const SERVER_URL = "http://localhost:5000/api/";
 
 class Nav extends Component{
@@ -94,6 +95,7 @@ class Nav extends Component{
   // }
   render(){
     return(
+
       <nav className="navbar navbar-expand-lg navbar-light bg-dark navbarbg">
       <Link to='/home' className="logo">Foodie</Link>
         <div className="collapse navbar-collapse" id="navbarText">
@@ -116,7 +118,6 @@ class Nav extends Component{
 
           </span>
           <Link to='/signup' className="navbar-brand link nav-margin pL10 pR10 alinkwhite">SignUp</Link>
-
         </div>
 
         </nav>
