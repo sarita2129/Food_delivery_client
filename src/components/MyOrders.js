@@ -144,7 +144,7 @@ export default class Home extends Component{
   render(){
     return(
       <div className="container">
-      <div>
+      <div id="myorder" className="content-wrap">
       {this.state.orderList.map( (list) => (
 
         <div>
@@ -154,21 +154,21 @@ export default class Home extends Component{
 
           {list === order._id ?
             <div>
-            <h3>{order.name}</h3>
+            <h5>{order.name}</h5>
 
               <p>{order.description}</p>
               <p>{order.Address}</p>
-              <p className="mL10imp">Order No :{order.order_no}</p>
-              <p className="mL10imp">Delivery Address :{order.deliveryaddress}</p>
+              <p>Order No :{order.order_no}</p>
+              <p>Delivery Address :{order.deliveryaddress}</p>
 
                 <div className="row">
 
                 <div className="col-md-2">
-                  <h5>Items:</h5>
+                  <h6>Items:</h6>
 
                 </div>
                 <div className="col-md-2">
-                  <h5>Cost:</h5>
+                  <h6>Cost:</h6>
 
                 </div>
                 </div>
@@ -179,11 +179,11 @@ export default class Home extends Component{
 
                   <div className="col-md-2">
 
-                    <p className="pL10">{dish.title}</p>
+                    <p>{dish.title}</p>
                   </div>
                   <div className="col-md-2">
 
-                    <p className="pL10">{`$${dish.cost}`}</p>
+                    <p>{`$${dish.cost}`}</p>
 
                     <p className="var">{ total += dish.cost }</p>
                   </div>
