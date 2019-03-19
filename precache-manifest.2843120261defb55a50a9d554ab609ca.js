@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "0ae980db6a237d40e684",
+    "revision": "d540c7392e6f9912ac33",
     "url": "/Food_delivery_client/static/css/main.b68d02d8.chunk.css"
   },
   {
-    "revision": "0ae980db6a237d40e684",
-    "url": "/Food_delivery_client/static/js/main.0ae980db.chunk.js"
+    "revision": "d540c7392e6f9912ac33",
+    "url": "/Food_delivery_client/static/js/main.d540c739.chunk.js"
   },
   {
     "revision": "3e4c19b1a27de1d28235",
@@ -28,19 +28,19 @@ self.__precacheManifest = [
     "url": "/Food_delivery_client/static/media/fontawesome-webfont.fee66e71.woff"
   },
   {
-    "revision": "674f50d287a8c48dc19ba404d20fe713",
-    "url": "/Food_delivery_client/static/media/fontawesome-webfont.674f50d2.eot"
-  },
-  {
     "revision": "b06871f281fee6b241d60582ae9369b9",
     "url": "/Food_delivery_client/static/media/fontawesome-webfont.b06871f2.ttf"
+  },
+  {
+    "revision": "674f50d287a8c48dc19ba404d20fe713",
+    "url": "/Food_delivery_client/static/media/fontawesome-webfont.674f50d2.eot"
   },
   {
     "revision": "912ec66d7572ff821749319396470bde",
     "url": "/Food_delivery_client/static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "140d64ae3aa5fa4563a7b17b40f6f8bc",
+    "revision": "9b3060ec0f81bfd11175b7bf859d5318",
     "url": "/Food_delivery_client/index.html"
   }
 ];
