@@ -62,8 +62,13 @@ export default class Home extends Component{
         if ($win.scrollTop() == 0){
           $('.innerdiv').slideToggle('slow');
           this.setState({toggle:this.state.toggle === "expand" ? "collapse" : "expand"});
+          // if(audioplay)
+          // $('#myAudio').get(0).pause();
           if(audioplay)
-          $('#myAudio').get(0).pause();
+          {
+            $('#myAudio').get(0).pause();
+            audioplay = false;
+          }
 
         }
         else if ($win.height() + $win.scrollTop() == $(document).height()) {

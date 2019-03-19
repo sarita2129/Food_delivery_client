@@ -19,7 +19,7 @@ export default class Footer extends Component{
 					<a href="#">Contact</a>
 				</p>
 
-				<p className="footer-company-name">Company Name &copy; 2015</p>
+				<p className="footer-company-name">Foodie &copy; 2015</p>
 			</div>
 
 			<div className="footer-center">
