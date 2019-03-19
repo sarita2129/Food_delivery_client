@@ -112,29 +112,34 @@ class Signup extends Component{
  }
   render(){
     return(
-      <div className="wrapper fadeInDown">
+      <div className="container">
+      <div className="row">
+        <div className="col-md-4 offset-md-4">
         <div id="formContent">
-
-          <div className="fadeIn first">
-          </div>
-
           <form onSubmit={this._handleSubmit}>
-            <label>FirstName</label>
-            <input type="text" id="firstName" className="fadeIn second" name="firstName" placeholder="First name" ref={node => {this.inputNode1 = node}} />
-            <label>LastName</label>
-            <input type="text" id="lastName" className="fadeIn second" name="lastName" placeholder="Last name" ref={node => {this.inputNode2 = node}} />
-            <label>Email</label>
-            <input type="text" id="login" className="fadeIn second" name="email" placeholder="Email" ref={node => {this.inputNode3 = node}} />
-            <label>Password</label>
-            <input type="password" id="password" className="fadeIn third passwordinput" name="password" placeholder="password" ref={node => {this.inputNode4 = node}} />
-            <input type="submit" className="fadeIn fourth" value="Log In" />
+            <div class="form-group">
+              FirstName
+              <input type="text" id="firstName" className="form-control txt" name="firstName" placeholder="First name" ref={node => {this.inputNode1 = node}} />
+            </div>
+            <div class="form-group">
+              LastName
+              <input type="text" id="lastName" className="form-control txt" name="lastName" placeholder="Last name" ref={node => {this.inputNode2 = node}} />
+            </div>
+            <div class="form-group">
+              Email
+              <input type="text" id="login" className="form-control txt" name="email" placeholder="Email" ref={node => {this.inputNode3 = node}} />
+            </div>
+            <div class="form-group">
+              Password
+              <input type="password" id="password" className="form-control txt" name="password" placeholder="password" ref={node => {this.inputNode4 = node}} />
+            </div>
+            <input type="submit" className="btn btn-primary" value="Log In" />
           </form>
 
-          <div id="formFooter">
-            <a className="underlineHover" href="#">Forgot Password?</a>
-          </div>
-
         </div>
+        </div>
+      </div>
+
       </div>
 
     );
