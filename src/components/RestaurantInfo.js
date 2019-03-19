@@ -155,7 +155,7 @@ export default class RestaurantInfo extends Component{
                {
                  console.log(res);
                  this.setState({success: true});
-                 this.setState({order: res.order});
+                 // this.setState({order: res.order});
                  var order = [res.order];
                  var resdishId = [];
                  var rescost = [];
@@ -237,6 +237,7 @@ export default class RestaurantInfo extends Component{
   }
   render(){
     return(
+      <div className="content-wrap">
       <div className="container">{ this.state.restaurant.map( (restaurant) => (
           <div className="row mT10 mB10">
             <div key={restaurant._id + 'moviediv'} className="row d-inline-block col-md-8">
@@ -321,6 +322,7 @@ export default class RestaurantInfo extends Component{
             </div>
           </div>
      ))}</div>
+     </div>
     );
   }
 }
