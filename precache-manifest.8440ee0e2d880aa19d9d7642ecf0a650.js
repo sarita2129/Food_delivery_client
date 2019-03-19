@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "73b875818f45af58be8e",
-    "url": "/Food_delivery_client/static/css/main.f4e14072.chunk.css"
+    "revision": "31c47b216857f980a645",
+    "url": "/Food_delivery_client/static/css/main.c3b3d77e.chunk.css"
   },
   {
-    "revision": "73b875818f45af58be8e",
-    "url": "/Food_delivery_client/static/js/main.73b87581.chunk.js"
+    "revision": "31c47b216857f980a645",
+    "url": "/Food_delivery_client/static/js/main.31c47b21.chunk.js"
   },
   {
     "revision": "3e4c19b1a27de1d28235",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/Food_delivery_client/static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "7d4fbd149b98df3d7dbf67c42906eb0d",
+    "revision": "3c744f1c379dbac097d86ce39105603f",
     "url": "/Food_delivery_client/index.html"
   }
 ];
