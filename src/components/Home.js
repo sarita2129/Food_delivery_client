@@ -64,18 +64,18 @@ export default class Home extends Component{
           this.setState({toggle:this.state.toggle === "expand" ? "collapse" : "expand"});
           // if(audioplay)
           // $('#myAudio').get(0).pause();
-          // if(audioplay)
-          // {
+          if(audioplay)
+          {
             $('#myAudio').get(0).pause();
-          //   audioplay = false;
-          // }
+            audioplay = false;
+          }
 
         }
         else if ($win.height() + $win.scrollTop() == $(document).height()) {
            $('.innerdiv').slideToggle('slow');
            this.setState({toggle:this.state.toggle === "expand" ? "collapse" : "expand"});
            $('#myAudio').get(0).play();
-           // audioplay = true;
+           audioplay = true;
         }
         // else{
         //   if(play)
