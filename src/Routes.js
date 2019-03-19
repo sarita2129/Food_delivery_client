@@ -12,7 +12,7 @@ import MyOrders from './components/MyOrders';
 
 const Routes = (
   <Router>
-    <div>
+    <div id="page-container">
     <Nav />
       <Route exact path="/home" component={ Home } />
       <Route exact path="/login" component={ Login } />

@@ -5,6 +5,7 @@ import App from './components/App';
 // import * as serviceWorker from './serviceWorker';
 
 import Routes from './Routes';
+import '../node_modules/font-awesome/css/font-awesome.min.css';
 
 // ReactDOM.render(<App />, document.getElementById('root'));
 ReactDOM.render(Routes, document.getElementById('root'));

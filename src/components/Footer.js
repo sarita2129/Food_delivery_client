@@ -2,66 +2,64 @@ import React, { Component } from 'react';
 import './Footer.css'
 import { Link } from 'react-router-dom';
 
-class Footer extends Component{
+export default class Footer extends Component{
   render(){
     return(
-      <div>
-      <footer class="container-fluid bg-grey py-5" >
-  <div class="container">
-     <div class="row">
-        <div class="col-md-6">
-           <div class="row">
-              <div class="col-md-6 ">
-                 <div class="logo-part">
-                    <Link to='/home' className="logo">Foodie</Link>
-                 </div>
-              </div>
-              <div class="col-md-6 px-4">
-                 <a href="#" class="btn-footer"> More Info </a>
-                 <a href="#" class="btn-footer"> Contact Us</a>
-              </div>
-           </div>
-        </div>
-        <div class="col-md-6">
-           <div class="row">
-              <div class="col-md-6 px-4">
-                 <div class="row ">
-                    <div class="col-md-6">
-                       <ul>
-                          <li> <a href="#"> Home</a> </li>
-                          <li> <a href="#"> About</a> </li>
-                          <li> <a href="#"> Careers</a> </li>
-                          <li> <a href="#"> Policy</a> </li>
-                          <li> <a href="#"> Refunds</a> </li>
-                          <li> <a href="#"> Help</a> </li>
-                          <li> <a href="#"> Contact</a> </li>
-                       </ul>
-                    </div>
+      <footer className="footer-distributed" id="footer">
 
-                 </div>
-              </div>
-              <div class="col-md-6 ">
-                 <h6> Newsletter</h6>
-                 <div class="social">
-                    <a href="#"><img style={{width: '50px', height: '50px'}} src="images/facebook.png" /></a>
-                    <a href="#"><img style={{width: '40px', height: '40px'}} src="images/instagram.png" /></a>
-                    <a href="#"><img style={{width: '40px', height: '40px'}} src="images/googleplus.png" /></a>
-                    <a href="#"><img style={{width: '40px', height: '40px'}} src="images/twitter.png" /></a>
+			<div className="footer-left">
 
-                 </div>
-                 <form class="form-footer my-3">
-                    <input type="text"  placeholder="search here...." name="search" />
-                    <input type="button" value="Go" />
-                 </form>
-                 <p>Copyrights Reelsplex 2019</p>
-              </div>
-           </div>
-        </div>
-     </div>
-  </div>
-  </footer>
-      </div>
+				<h3 className="logo">Foodie</h3>
+
+				<p className="footer-links">
+					<Link to='/home' >Home</Link>
+					·
+					<a href="#">About</a>
+					·
+					<a href="#">Contact</a>
+				</p>
+
+				<p className="footer-company-name">Company Name &copy; 2015</p>
+			</div>
+
+			<div className="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>21 Revolution Street</span> Paris, France</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+1 555 123456</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@company.com">support@company.com</a></p>
+				</div>
+
+			</div>
+
+			<div className="footer-right">
+
+				<p className="footer-company-about">
+					<span>About the company</span>
+          Established since 2008, we take most care to deliver happiness at your door steps.
+				</p>
+
+				<div className="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
     );
   }
 }
-export default Footer;
