@@ -220,5 +220,8 @@ table tr td{
     font-size: 15px;
     line-height: 1rem;
     letter-spacing: 0.01rem;
-    width: 400px;
+
+}
+.w400{
+  width: 400px;
 }

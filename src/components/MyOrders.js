@@ -156,10 +156,10 @@ export default class Home extends Component{
             <div>
             <h5>{order.name}</h5>
 
-              <p>{order.description}</p>
-              <p>{order.Address}</p>
+              <p className="w400">{order.description}</p>
+              <p className="w400">{order.Address}</p>
               <p>Order No :{order.order_no}</p>
-              <p>Delivery Address :{order.deliveryaddress}</p>
+              <p className="w400">Delivery Address :{order.deliveryaddress}</p>
 
                 <div className="row">
 
