@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/Food_delivery_client/static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "70b0ebd8f134291ada505b742787a4f3",
+    "revision": "36e24f312db5eea97fd28901231751d9",
     "url": "/Food_delivery_client/index.html"
   }
 ];
