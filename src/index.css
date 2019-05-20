@@ -234,6 +234,7 @@ table tr td{
   background-position: bottom;
   background-color: black;
   position: absolute;
+  z-index: 999;
   opacity: 0.3;
 }
 .MT350{
