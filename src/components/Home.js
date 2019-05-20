@@ -93,10 +93,9 @@ export default class Home extends Component{
     return(
       <div className="content-wrap">
       <div className="banner">
-        <div className="overlay">
-        </div>
       </div>
-      <div className="container">
+      <div className="overlay"></div>
+      <div className="container MT350">
         <div className="row">
         <img src="images/weekhot.png" alt="weekhot" key="imgweekhot" id="imgweekhot"/>
 

@@ -92,6 +92,7 @@ box-sizing: border-box;
   /* opacity: 0.8; */
   background-position: bottom center;
   z-index: 6;
+  position:absolute;
 }
 .navbg{
   background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
@@ -224,4 +225,17 @@ table tr td{
 }
 .w400{
   width: 400px;
+}
+.overlay{
+  width: 100%;
+  background-size: cover;
+  padding: 25px 0 40px;
+  height: 350px;
+  background-position: bottom;
+  background-color: black;
+  position: absolute;
+  opacity: 0.3;
+}
+.MT350{
+  margin-top: 350px;
 }
